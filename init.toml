@@ -1,0 +1,103 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    # colorscheme = "monokai_pro"
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    guifont = "Consolas:h12"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = false
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    filetree_direction = "left"
+    # relativenumber = false
+    cindent_shiftwidth = 4
+    smartindent = true
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after  = "myspacevim#after"
+    windows_smartclose = ''
+
+# Enable autocomplete layer
+# [[layers]]
+# name = 'autocomplete'
+# auto_completion_return_key_behavior = "complete"
+# auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'bottom'
+default_height = 30
+
+# 文件木湖搜索
+[[layers]]
+name = 'fzf'
+
+# 语法检测
+[[layers]]
+name = "checkers"
+# lint_on_the_fly = true
+
+# 书签工具
+[[layers]]
+name = 'tools'
+
+# 主题工具
+[[layers]]
+  name = "colorscheme"
+
+# git
+[[layers]]
+  name = "git"
+
+# 语言支持
+[[layers]]
+  name = "lang#c"
+# [[layers]]
+#   name = "lang#python"
+[[layers]]
+  name = "lang#sh"
+[[layers]]
+  name = "lang#html"
+
+# 光标单词加下划线
+[[custom_plugins]]
+name = "itchyny/vim-cursorword"
+merged = 0
+
+# 不同颜色高亮
+[[custom_plugins]]
+name = "lfv89/vim-interestingwords"
+merged = 0
+
+# 添加Doxygen格式注释
+[[custom_plugins]]
+name = "vim-scripts/DoxygenToolkit.vim"
+merged = 0
+
+# html补全工具
+[[custom_plugins]]
+name = "mattn/emmet-vim"
+merged = 0
+
+# 彩虹括号
+[[custom_plugins]]
+name = "frazrepo/vim-rainbow"
+merged = 0
+
+
