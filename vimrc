@@ -53,7 +53,7 @@ let g:DoxygenToolkit_versionString = "1.0.0"
 
 " YouCompleteMe
 " C family Completion Path
-let g:ycm_global_ycm_extra_conf='~/.vim/pack/code_common/start/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 " 跳转快捷键
 " nnoremap <c-k> :YcmCompleter GoToDeclaration<CR>|
 " nnoremap <c-h> :YcmCompleter GoToDefinition<CR>|
