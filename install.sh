@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # cd /etc/vim; vim vimrc; let mapleader=","
+# sudo apt-get install font-manager
 
 if [ $1 = "install" ];then
     echo "install...";
