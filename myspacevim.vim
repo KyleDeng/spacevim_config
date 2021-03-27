@@ -22,6 +22,10 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nmap', ['k', 'c', 'p'], 'dp', 'diff push', 0) "diff push
     call SpaceVim#custom#SPC('nmap', ['k', 'c', 'g'], 'do', 'diff get', 0) "diff get
 
+    "寄存器操作
+    call SpaceVim#custom#SPC('nmap', ['r', 'r'], ':reg<CR>', 'show all reg', 0)
+    call SpaceVim#custom#SPC('nmap', ['r', 'C'], ':call Regclear()<CR>', 'clear all reg', 0)
+
     "跳转相关
     call SpaceVim#custom#SPC('nmap', ['j', 'j'], ':sp<Esc><C-w>j<Esc>:call GoToDef()<CR>|', 'spilt jump', 0) "水平分屏跳转
     call SpaceVim#custom#SPC('nmap', ['j', 'g'], ':vsp<Esc><C-w>l<Esc>:call GoToDef()<CR>|', 'spilt jump', 0) "垂直分屏跳转

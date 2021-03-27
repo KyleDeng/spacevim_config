@@ -100,4 +100,15 @@ merged = 0
 name = "frazrepo/vim-rainbow"
 merged = 0
 
+# 多光标操作
+[[custom_plugins]]
+name = "mg979/vim-visual-multi"
+merged = 0
+
+# 计算
+[[custom_plugins]]
+name = "theniceboy/vim-calc"
+merged = 0
+
+
 

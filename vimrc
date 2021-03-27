@@ -62,9 +62,11 @@ let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 " Emmet
 let g:user_emmet_expandabbr_key = '<leader>e'
 
+" Calc
+nnoremap <LEADER>c :call Calc()<CR>
+
 " 替换
 :nmap <leader>h :%s/\<<c-r>=expand("<cword>")<cr>\>//gODOD
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Go to define
@@ -75,6 +77,16 @@ func! GoToDef()
     else  " 其次使用YCM
         exec 'YcmCompleter GoToDefinitionElseDeclaration'
     endif
+endfunc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" reg clear
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+func! Regclear()
+    let regs=split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"', '\zs')
+    for r in regs
+      call setreg(r, [])
+    endfor
 endfunc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
