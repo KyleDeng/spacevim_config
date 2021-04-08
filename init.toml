@@ -44,14 +44,13 @@ name = 'shell'
 default_position = 'bottom'
 default_height = 30
 
-# 文件木湖搜索
+# 文件模糊搜索
 [[layers]]
 name = 'fzf'
 
 # 语法检测
 [[layers]]
-name = "checkers"
-# lint_on_the_fly = true
+  name = "checkers"
 
 # 书签工具
 [[layers]]
@@ -68,12 +67,17 @@ name = 'tools'
 # 语言支持
 [[layers]]
   name = "lang#c"
-# [[layers]]
-#   name = "lang#python"
+[[layers]]
+  name = "lang#python"
 [[layers]]
   name = "lang#sh"
 [[layers]]
   name = "lang#html"
+
+# git blame
+[[custom_plugins]]
+name = "zivyangll/git-blame.vim"
+merged = 0
 
 # 光标单词加下划线
 [[custom_plugins]]

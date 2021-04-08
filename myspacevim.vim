@@ -32,6 +32,9 @@ function! myspacevim#before() abort
     nnoremap 1 :call GoToDef()<CR>
     nnoremap 2 <C-o>
 
+    "git blame
+    call SpaceVim#custom#SPC('nmap', ['g', 'l'], ':<C-u>call gitblame#echo()<CR>', 'git blame line', 0) "查看当前行个blame
+
     "编辑相关
     " inoremap <C-CR> <Esc>i<CR><Esc>O
     inoremap  <Esc>i<CR><Esc>O

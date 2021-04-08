@@ -90,6 +90,12 @@ func! Regclear()
 endfunc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Json 格式化
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+command! Jsonf :execute '%!python -m json.tool'
+  \ | :execute '%!python2 -c "import re,sys;sys.stdout.write(re.sub(r\"\\\u[0-9a-f]{4}\", lambda m:m.group().decode(\"unicode_escape\").encode(\"utf-8\"), sys.stdin.read()))"'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 彩虹括号
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rainbow_active = 1

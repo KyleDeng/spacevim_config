@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# 插件安装位置 ~/.cache/vimfiles/repos/github.com
 # cd /etc/vim; vim vimrc; let mapleader=","
 # sudo apt-get install font-manager
 
