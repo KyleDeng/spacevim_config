@@ -114,5 +114,10 @@ merged = 0
 name = "theniceboy/vim-calc"
 merged = 0
 
+# log高亮
+[[custom_plugins]]
+name = "MTDL9/vim-log-highlighting"
+merged = 0
+
 
 
