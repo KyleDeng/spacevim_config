@@ -39,6 +39,7 @@ let mapleader=","            " 设置leader键
 set wrap                     " 设置自动换行显示
 set tabstop=4                " 设置tab键的宽度
 set shiftwidth=4             " 换行时行间交错使用4个空格
+set guifont=Monospace\ Bold\ 12 " 字体设置
 " set autoindent               " 自动对齐
 " set backspace=2              " 设置退格键可用
 " set cindent shiftwidth=4     " 自动缩进4空格
@@ -107,8 +108,17 @@ let g:rainbow_load_separately = [
     \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
     \ ]
 
-let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
-let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'blue', 'magenta']
+"/usr/share/vim/vim81/rgb.txt
+let g:rainbow_guifgs = ['gray', 'lightblue', 'lightgreen', 'yellow', 'IndianRed']
+let g:rainbow_ctermfgs = ['gray', 'lightblue', 'lightgreen', 'yellow', 'magenta']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MarkdownPreview
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 在切换 buffer 的时候自动关闭预览窗口，设置为 0 则在切换 buffer 的时候不" 自动关闭预览窗口
+let g:mkdp_auto_close = 0
+" 设置为 1 则只有在保存文件，或退出插入模式的时候更新预览，默认为 0，实时" 更新预览
+let g:mkdp_refresh_slow = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickly Run

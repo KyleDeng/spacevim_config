@@ -119,5 +119,14 @@ merged = 0
 name = "MTDL9/vim-log-highlighting"
 merged = 0
 
+# markdown预览
+[[custom_plugins]]
+name = "iamcco/markdown-preview.vim"
+merged = 0
+
+[[custom_plugins]]
+name = "pangloss/vim-javascript"
+merged = 0
+
 
 
