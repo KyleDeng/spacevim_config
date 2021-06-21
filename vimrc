@@ -40,6 +40,7 @@ set wrap                     " 设置自动换行显示
 set tabstop=4                " 设置tab键的宽度
 set shiftwidth=4             " 换行时行间交错使用4个空格
 set guifont=Monospace\ Bold\ 12 " 字体设置
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 " set autoindent               " 自动对齐
 " set backspace=2              " 设置退格键可用
 " set cindent shiftwidth=4     " 自动缩进4空格
