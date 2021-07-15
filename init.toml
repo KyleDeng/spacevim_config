@@ -124,9 +124,14 @@ merged = 0
 name = "iamcco/markdown-preview.vim"
 merged = 0
 
+# javascript
 [[custom_plugins]]
 name = "pangloss/vim-javascript"
 merged = 0
 
+# javascript格式化
+[[custom_plugins]]
+name = "maksimr/vim-jsbeautify"
+merged = 0
 
 

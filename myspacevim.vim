@@ -6,6 +6,7 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nmap', ['k', 'U'], 'vvgU', 'upper case word', 0) "单词大写
     call SpaceVim#custom#SPC('nmap', ['k', 'u'], 'vvgu', 'lower case word', 0) "单词小写
     call SpaceVim#custom#SPC('nmap', ['k', 'r'], ':e!<CR>', 'refresh', 0) "刷新
+    call SpaceVim#custom#SPC('nmap', ['k', 'f'], ':call FormatFile()<CR>', 'format', 0) "格式化
 
     "Doxygen相关
     call SpaceVim#custom#SPCGroupName(['k', 'd'], "Doxygen")

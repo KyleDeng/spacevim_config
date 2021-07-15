@@ -122,6 +122,24 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Format
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+func! FormatFile()
+    exec "w"
+    if &filetype == 'javascript'
+        exec 'call JsBeautify()'
+	elseif &filetype == 'json'
+        exec 'call JsonBeautify()'
+	elseif &filetype == 'jsx'
+        exec 'call JsxBeautify()'
+	elseif &filetype == 'html'
+        exec 'call HtmlBeautify()'
+	elseif &filetype == 'css'
+        exec 'call CSSBeautify()'
+    endif
+endfunc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickly Run
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F5> :call CompileRunGcc()<CR>
