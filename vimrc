@@ -101,6 +101,8 @@ command! Jsonf :execute '%!python -m json.tool'
 " 彩虹括号
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rainbow_active = 1
+" cmake 不能使用彩虹括号
+autocmd Filetype cmake call rainbow#clear()
 
 let g:rainbow_load_separately = [
     \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
