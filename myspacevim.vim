@@ -23,6 +23,14 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nmap', ['k', 'c', 'p'], 'dp', 'diff push', 0) "diff push
     call SpaceVim#custom#SPC('nmap', ['k', 'c', 'g'], 'do', 'diff get', 0) "diff get
 
+    "折叠相关
+    call SpaceVim#custom#SPCGroupName(['k', 'z'], "Fold")
+    call SpaceVim#custom#SPC('nmap', ['k', 'z', 'm'], ':set fdm=manual<CR>', 'manual', 0)
+    call SpaceVim#custom#SPC('nmap', ['k', 'z', 'i'], ':set fdm=indent<CR>', 'indent', 0)
+    call SpaceVim#custom#SPC('nmap', ['k', 'z', 'e'], ':set fdm=expr<CR>', 'expr', 0)
+    call SpaceVim#custom#SPC('nmap', ['k', 'z', 's'], ':set fdm=syntax<CR>', 'syntax', 0)
+    call SpaceVim#custom#SPC('nmap', ['k', 'z', 'd'], ':set fdm=diff<CR>', 'diff', 0)
+
     "寄存器操作
     call SpaceVim#custom#SPC('nmap', ['r', 'r'], ':reg<CR>', 'show all reg', 0)
     call SpaceVim#custom#SPC('nmap', ['r', 'C'], ':call Regclear()<CR>', 'clear all reg', 0)
@@ -32,6 +40,10 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nmap', ['j', 'g'], ':vsp<Esc><C-w>l<Esc>:call GoToDef()<CR>|', 'spilt jump', 0) "垂直分屏跳转
     nnoremap 1 :call GoToDef()<CR>
     nnoremap 2 <C-o>
+
+    "错误检查
+    call SpaceVim#custom#SPC('nmap', ['e', 'o'], ':NeomakeEnable<CR>', 'error check open', 0) "打开错误检查
+    call SpaceVim#custom#SPC('nmap', ['e', 'x'], ':NeomakeDisable<CR>', 'error check off', 0) "关闭错误检查
 
     "git blame
     call SpaceVim#custom#SPC('nmap', ['g', 'l'], ':<C-u>call gitblame#echo()<CR>', 'git blame line', 0) "查看当前行个blame

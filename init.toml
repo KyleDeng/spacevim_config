@@ -134,4 +134,14 @@ merged = 0
 name = "maksimr/vim-jsbeautify"
 merged = 0
 
+# ctags
+[[custom_plugins]]
+name = "ludovicchabant/vim-gutentags"
+merged = 0
+
+# sandwich
+[[custom_plugins]]
+name = "machakann/vim-sandwich"
+merged = 0
+
 
