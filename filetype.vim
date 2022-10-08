@@ -11,7 +11,7 @@ augroup spacevim_filetype_script
   au BufRead,BufNewFile *.rs set filetype=rust
   au BufNewFile,BufRead *.sol setf solidity
   au BufNewFile,BufRead IoTOSconfig setf kconfig
-  au BufNewFile,BufRead Gconfig setf kconfig
+  au BufNewFile,BufRead APPconfig setf kconfig
   au BufRead,BufNewFile SConstruct set filetype=python
   au BufRead,BufNewFile SConscript set filetype=python
 augroup END

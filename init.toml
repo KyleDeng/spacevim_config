@@ -72,6 +72,8 @@ name = 'tools'
 [[layers]]
   name = "lang#sh"
 [[layers]]
+  name = "lang#go"
+[[layers]]
   name = "lang#html"
 
 # git blame
