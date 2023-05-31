@@ -146,4 +146,8 @@ merged = 0
 name = "machakann/vim-sandwich"
 merged = 0
 
+[[custom_plugins]]
+name = "Lokaltog/powerline"
+merged = 0
+
 

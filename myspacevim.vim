@@ -8,6 +8,11 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nmap', ['k', 'r'], ':e!<CR>', 'refresh', 0) "刷新
     call SpaceVim#custom#SPC('nmap', ['k', 'f'], ':call FormatFile()<CR>', 'format', 0) "格式化
 
+    "Bin文件操作
+    call SpaceVim#custom#SPCGroupName(['k', 'b'], "Bin")
+    call SpaceVim#custom#SPC('nmap', ['k', 'b', 'b'], ':%!xxd<CR>', '2hex', 0) "hex
+    call SpaceVim#custom#SPC('nmap', ['k', 'b', 'r'], ':%!xxd -r<CR>', '2bin', 0) "bin
+
     "Doxygen相关
     call SpaceVim#custom#SPCGroupName(['k', 'd'], "Doxygen")
     call SpaceVim#custom#SPC('nmap', ['k', 'd', 'd'], ':Dox<CR>', ':Dox', 0) "Dox
@@ -46,7 +51,7 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nmap', ['e', 'x'], ':NeomakeDisable<CR>', 'error check off', 0) "关闭错误检查
 
     "git blame
-    call SpaceVim#custom#SPC('nmap', ['g', 'l'], ':<C-u>call gitblame#echo()<CR>', 'git blame line', 0) "查看当前行个blame
+    call SpaceVim#custom#SPC('nmap', ['g', 'l'], ':<C-u>call gitblame#echo()<CR>', 'git blame line', 0) "查看当前行的blame
 
     "编辑相关
     " inoremap <C-CR> <Esc>i<CR><Esc>O
